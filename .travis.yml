@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+  - yarn
+  - yarn run build
+deploy:
+  provider: firebase
+  token:
+    secure: $FIREBASE_TOKEN
+after_deploy:
+  yarn run lh -- https://react-meetup-blr.firebaseapp.com
