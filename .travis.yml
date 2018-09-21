@@ -12,5 +12,5 @@ deploy:
   provider: firebase
   token:
     secure: $FIREBASE_TOKEN
-after_deploy:
+after_script:
   yarn run lh -- https://react-meetup-blr.firebaseapp.com
