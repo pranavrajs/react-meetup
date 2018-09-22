@@ -5,6 +5,11 @@ import './App.css';
 
 class App extends Component {
 
+  componentDidMount() {
+    window.loadTimeMetrics = {};
+    window.loadTimeMetrics.componentMountTime = performance.now();
+  }
+
   render() {
     return (
       <div className="App">
@@ -19,7 +24,7 @@ class App extends Component {
 
 
           <a href="https://www.intuit.com/" target="_blank">
-            Open Intuit without noreferrer
+            Open test without noreferrer
           </a>
 
 
